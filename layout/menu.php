@@ -27,6 +27,7 @@
 						<li><a href="killers.php">Killstatistics</a> </li>
 						<li><a href="deaths.php">Latest deaths</a> </li>
 						<li><a href="onlinelist.php">Online List</a> </li>
+						<li><a href="loot.php">Loot Statics</a> </li>
 					</ul>
 				</li>
 				<li><a href="serverinfo.php"><i class="fa fa-book"></i> Library</a>
