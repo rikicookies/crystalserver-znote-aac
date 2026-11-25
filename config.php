@@ -41,6 +41,24 @@
 	// Hostname is usually localhost or 127.0.0.1.
 	$config['sqlHost'] = '127.0.0.1';
 
+	// Local project overrides are read from environment variables configured by Apache.
+	$config['server_path'] = getenv('TIBIA_SERVER_PATH') ?: 'C:/dev-/Tibia-runtime';
+	$config['sqlUser'] = getenv('TIBIA_SQL_USER') ?: $config['sqlUser'];
+	$config['sqlPassword'] = getenv('TIBIA_SQL_PASSWORD') ?: $config['sqlPassword'];
+	$config['sqlDatabase'] = getenv('TIBIA_SQL_DATABASE') ?: $config['sqlDatabase'];
+	$config['sqlHost'] = getenv('TIBIA_SQL_HOST') ?: $config['sqlHost'];
+	$config['sqlPort'] = getenv('TIBIA_SQL_PORT') ?: '3306';
+	$config['site_url'] = getenv('TIBIA_ZNOTE_URL') ?: $config['site_url'];
+
+	// Local project overrides are read from environment variables configured by Apache.
+	$config['server_path'] = getenv('TIBIA_SERVER_PATH') ?: $config['server_path'];
+	$config['sqlUser'] = getenv('TIBIA_SQL_USER') ?: $config['sqlUser'];
+	$config['sqlPassword'] = getenv('TIBIA_SQL_PASSWORD') ?: $config['sqlPassword'];
+	$config['sqlDatabase'] = getenv('TIBIA_SQL_DATABASE') ?: $config['sqlDatabase'];
+	$config['sqlHost'] = getenv('TIBIA_SQL_HOST') ?: $config['sqlHost'];
+	$config['sqlPort'] = getenv('TIBIA_SQL_PORT') ?: '3306';
+	$config['site_url'] = getenv('TIBIA_ZNOTE_URL') ?: $config['site_url'];
+
 	// QR code authenticator Only works with TFS 1.2+
 	$config['twoFactorAuthenticator'] = false;
 	// You can use the mobile phone app "authy" with this.

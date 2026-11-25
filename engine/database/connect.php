@@ -32,7 +32,13 @@ $install = "
 </ol>
 ";
 
-$connect = new mysqli($config['sqlHost'], $config['sqlUser'], $config['sqlPassword'], $config['sqlDatabase']);
+$connect = new mysqli(
+	$config['sqlHost'],
+	$config['sqlUser'],
+	$config['sqlPassword'],
+	$config['sqlDatabase'],
+	(int) ($config['sqlPort'] ?? 3306)
+);
 
 if ($connect->connect_errno) {
 	die("Failed to connect to MySQL: (" . $connect->connect_errno . ") " . $connect->connect_error . $install);
